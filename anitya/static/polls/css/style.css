@@ -1,0 +1,26 @@
+body {
+    background: white url("images/mountain.jpeg") no-repeat;
+}
+li a {
+    color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+li::before {
+  position: relative;
+  top: -2px;
+  left: -18px;
+
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+
+  content: '';
+
+  border-radius: 100%;
+  background: pink;
+}

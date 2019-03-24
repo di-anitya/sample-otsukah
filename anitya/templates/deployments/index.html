@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}{{ block.super }} | インスタンス一覧{% endblock title %}
+{% load staticfiles %}
+
+{% block extra_head %}
+    <link href="{% static 'deployments/css/style-deployments.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<h2>インスタンス一覧</h2>
+<div class="table-header">
+    <button type="button" class="btn btn-outline-dark"><i class="fa fa-plus"></i>&nbsp;&nbsp;<span>インスタンス作成</span></button>
+</div>
+{% if latest_instance_list %}
+<table class="table table-striped table-hover">
+    <thead><tr><th>インスタンスID</th><th>インスタンス名</th><th>種別</th></tr></thead>
+    <tbody>
+    {% for instance in latest_instance_list %}
+        <tr>
+            <td>{{ instance.id }}</td>
+            <td><a href="{% url 'deployments:detail' instance.id %}">{{ instance.name }}</a></td>
+            <td>{{ instance.category }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% include "common/pagination.html" %}
+{% else %}
+<p>インスタンスが存在しません。</p>
+{% endif %}
+<br/>
+<hr>
+<b>latest_instance_list: </b>{{ latest_instance_list }}
+<br/><br/>
+{% endblock %}

@@ -1,3 +1,4 @@
 #!/bin/sh
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
-pip install -r requirements.txt
+pip install -r ${SCRIPT_DIR}requirements.txt
