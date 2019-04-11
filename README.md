@@ -1,4 +1,4 @@
-# Sample Application for Anicya
+# Sample Application for Anitya
 ![snapshot](https://user-images.githubusercontent.com/6835793/55947362-463a1f80-5c89-11e9-813a-988e21b1f5af.png)
 ## インストール方法
 1. Python3 をインストール
