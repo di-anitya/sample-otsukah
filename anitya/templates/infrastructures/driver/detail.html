@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ block.super }} | ドライバ（詳細）{% endblock title %}
+{% load staticfiles %}
+
+{% block extra_head %}
+    <link href="{% static 'infrastructures/css/style-infrastructures.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div class="breadlist">› 物理インフラ › <a href="/infrastructures/driver">ドライバ</a> › ドライバ（詳細）</div>
+<h2 class="page-header">{{ driver.id }}</h2>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% csrf_token %}
+<table>
+    <tr><td>ドライバID</td><td>{{ driver.id }}</td></tr>
+    <tr><td>ドライバ名</td><td>{{ driver.name }}</td></tr>
+    <tr><td>プラグイン</td><td>{{ driver.plugin }}</td></tr>
+    <tr><td>作成日時</td><td>{{ driver.created_at }}</td></tr>
+    <tr><td>更新日時</td><td>{{ driver.updated_at }}</td></tr>
+</table>
+{% endblock %}

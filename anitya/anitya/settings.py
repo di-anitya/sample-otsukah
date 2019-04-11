@@ -37,11 +37,13 @@ INSTALLED_APPS = [
   'django.contrib.sessions',
   'django.contrib.messages',
   'django.contrib.staticfiles',
+  'accounts.apps.AccountsConfig',
   'dashboards.apps.DashboardsConfig',
   'infrastructures.apps.InfrastructuresConfig',
   'deployments.apps.DeploymentsConfig',
   'testings.apps.TestingsConfig',
   'monitorings.apps.MonitoringsConfig',
+  'bootstrap_modal_forms',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +87,7 @@ DATABASES = {
   }
 }
 
+AUTH_USER_MODEL = 'accounts.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -126,3 +129,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
+
+LOGIN_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

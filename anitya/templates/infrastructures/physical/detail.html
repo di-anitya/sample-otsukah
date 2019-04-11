@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ block.super }} | 物理インフラ（詳細）{% endblock title %}
+{% load staticfiles %}
+
+{% block extra_head %}
+    <link href="{% static 'infrastructures/css/style-infrastructures.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div class="breadlist">› インフラ › <a href="/infrastructures/physical">物理インフラ</a> › インフラ（詳細）</div>
+<h2 class="page-header">{{ infrastructure.id }}</h2>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% csrf_token %}
+<table>
+    <tr><td>インフラID</td><td>{{ physical.id }}</td></tr>
+    <tr><td>インフラ名</td><td>{{ physical.name }}</td></tr>
+    <tr><td>種別</td><td>{{ physical.category }}</td></tr>
+    <tr><td>ドライバID</td><td>{{ physical.driver_id }}</td></tr>
+    <tr><td>IPアドレス</td><td>{{ physical.ip_address }}</td></tr>
+    <tr><td>シークレットキー</td><td>{{ physical.secret_key }}</td></tr>
+    <tr><td>リージョン</td><td>{{ physical.az }}</td></tr>
+    <tr><td>備考</td><td>{{ physical.description }}</td></tr>
+    <tr><td>作成日時</td><td>{{ physical.created_at }}</td></tr>
+    <tr><td>更新日時</td><td>{{ physical.updated_at }}</td></tr>
+</table>
+{% endblock %}

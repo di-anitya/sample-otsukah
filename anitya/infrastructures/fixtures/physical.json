@@ -1,0 +1,17 @@
+[
+{
+  "model": "infrastructures.physical",
+  "pk": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+  "fields": {
+    "name": "AWS: Tokyo Region",
+    "category": "AWS",
+    "driver_id": "00c30fe4-f466-4a9c-9c73-7f5de2aea5b2",
+    "ip_address": "13.230.9.8",
+    "secret_key": "aws-otsuka",
+    "az": "ap-northeast-1a",
+    "description": "AWS",
+    "created_at": "2019-03-24T14:12+00:00",
+    "updated_at": "2019-03-24T14:12+00:00"
+  }
+}
+]

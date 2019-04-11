@@ -1,0 +1,134 @@
+[
+{
+  "model": "infrastructures.virtual",
+  "pk": "2284efae-ef34-4667-aa89-30d073d91e75",
+  "fields": {
+    "name": "web-1",
+    "physical_id": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+    "tags": "apache",
+    "description": "Web Server",
+    "created_at": "2019-03-24T15:37+00:00",
+    "updated_at": "2019-04-06T08:09+00:00"
+  }
+},
+{
+  "model": "infrastructures.virtual",
+  "pk": "dc8168a2-a7ec-441d-85aa-2e5045115534",
+  "fields": {
+    "name": "db-1",
+    "physical_id": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+    "tags": "mysql",
+    "description": "DB Server",
+    "created_at": "2019-04-06T08:27+00:00",
+    "updated_at": "2019-04-06T08:27+00:00"
+  }
+},
+{
+  "model": "infrastructures.virtual",
+  "pk": "07d993e0-7ab5-4d5e-819b-07ee581d8bbf",
+  "fields": {
+    "name": "web-2",
+    "physical_id": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+    "tags": "mysql",
+    "description": "DB Server",
+    "created_at": "2019-04-06T08:27+00:00",
+    "updated_at": "2019-04-06T08:27+00:00"
+  }
+},
+{
+  "model": "infrastructures.virtual",
+  "pk": "c644ba59-d8b9-481b-93e5-d124ef7b3558",
+  "fields": {
+    "name": "web-3",
+    "physical_id": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+    "tags": "mysql",
+    "description": "DB Server",
+    "created_at": "2019-04-06T08:27+00:00",
+    "updated_at": "2019-04-06T08:27+00:00"
+  }
+},
+{
+  "model": "infrastructures.virtual",
+  "pk": "3ebc9d6c-9e40-45b8-ae7e-e4fac0e0c72d",
+  "fields": {
+    "name": "web-4",
+    "physical_id": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+    "tags": "mysql",
+    "description": "DB Server",
+    "created_at": "2019-04-06T08:27+00:00",
+    "updated_at": "2019-04-06T08:27+00:00"
+  }
+},
+{
+  "model": "infrastructures.virtual",
+  "pk": "e36a861a-d961-4bdb-97fe-86ea24bab5b4",
+  "fields": {
+    "name": "db-2",
+    "physical_id": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+    "tags": "mysql",
+    "description": "DB Server",
+    "created_at": "2019-04-06T08:27+00:00",
+    "updated_at": "2019-04-06T08:27+00:00"
+  }
+},
+{
+  "model": "infrastructures.virtual",
+  "pk": "d3dbd662-844f-440b-84dc-e1e546418212",
+  "fields": {
+    "name": "db-3",
+    "physical_id": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+    "tags": "mysql",
+    "description": "DB Server",
+    "created_at": "2019-04-06T08:27+00:00",
+    "updated_at": "2019-04-06T08:27+00:00"
+  }
+},
+{
+  "model": "infrastructures.virtual",
+  "pk": "ee7291fe-6f68-46df-9267-9ab79ec4459d",
+  "fields": {
+    "name": "web-5",
+    "physical_id": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+    "tags": "mysql",
+    "description": "DB Server",
+    "created_at": "2019-04-06T08:29+00:00",
+    "updated_at": "2019-04-06T08:29+00:00"
+  }
+},
+{
+  "model": "infrastructures.virtual",
+  "pk": "d8e80228-9769-41a9-9938-0a6d4bc95a80",
+  "fields": {
+    "name": "web-6",
+    "physical_id": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+    "tags": "mysql",
+    "description": "DB Server",
+    "created_at": "2019-04-06T08:29+00:00",
+    "updated_at": "2019-04-06T08:29+00:00"
+  }
+},
+{
+  "model": "infrastructures.virtual",
+  "pk": "5fb4e978-3c6e-4b76-8b3d-55c898e8b315",
+  "fields": {
+    "name": "web-7",
+    "physical_id": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+    "tags": "mysql",
+    "description": "DB Server",
+    "created_at": "2019-04-06T08:29+00:00",
+    "updated_at": "2019-04-06T08:29+00:00"
+  }
+},
+{
+  "model": "infrastructures.virtual",
+  "pk": "20941a53-2a43-4973-aec9-76197f6cf782",
+  "fields": {
+    "name": "web-8",
+    "physical_id": "61e739ca-e1dc-401e-9aa8-6adb2d69261c",
+    "tags": "mysql",
+    "description": "DB Server",
+    "created_at": "2019-04-06T08:29+00:00",
+    "updated_at": "2019-04-06T08:29+00:00"
+  }
+}
+]

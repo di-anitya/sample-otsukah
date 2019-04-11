@@ -22,7 +22,9 @@ urlpatterns = [
     'favicon.ico',
     RedirectView.as_view(url='/static/common/images/favicon.ico', permanent=True)
   ),
-  path('dashboards/', include('dashboards.urls')),
+  path('', include('dashboards.urls')),
+  path('accounts/', include('accounts.urls')),
+  path('accounts/', include('django.contrib.auth.urls')),
   path('infrastructures/', include('infrastructures.urls')),
   path('deployments/', include('deployments.urls')),
   path('testings/', include('testings.urls')),

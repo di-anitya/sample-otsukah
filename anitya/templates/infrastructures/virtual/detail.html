@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ block.super }} | 仮想マシン詳細{% endblock title %}
+{% load staticfiles %}
+
+{% block extra_head %}
+    <link href="{% static 'infrastructures/css/style-infrastructures.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div class="breadlist">› 仮想インフラ › <a href="/infrastructures/virtual">仮想マシン</a> › 仮想マシン（詳細）</div>
+<h2 class="page-header">{{ virtual.id }}</h2>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% csrf_token %}
+<table>
+    <tr><td>仮想マシンID</td><td>{{ virtual.id }}</td></tr>
+    <tr><td>仮想マシン名</td><td>{{ virtual.name }}</td></tr>
+    <tr><td>インフラID</td><td>{{ virtual.infrastructure_id }}</td></tr>
+    <tr><td>タグ</td><td>{{ virtual.tags }}</td></tr>
+    <tr><td>備考</td><td>{{ virtual.description }}</td></tr>
+    <tr><td>作成日時</td><td>{{ virtual.created_at }}</td></tr>
+    <tr><td>更新日時</td><td>{{ virtual.updated_at }}</td></tr>
+</table>
+{% endblock %}
