@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}{{ block.super }} | 仮想マシン一覧{% endblock title %}
+{% load staticfiles %}
+
+{% block extra_head %}
+    <link href="{% static 'infrastructures/css/style-infrastructures.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div class="breadlist">› 仮想インフラ › 仮想マシン</div>
+<h2 class="page-header">仮想マシン</h2>
+<div class="table-header">
+    <button type="button" class="btn btn-outline-dark"><i class="fa fa-plus"></i>&nbsp;&nbsp;<span>仮想マシン作成</span></button>
+</div>
+{% if latest_virtual_list %}
+<table class="table table-striped table-hover">
+    <thead><tr><th>仮想マシンID</th><th>仮想マシン名</th><th>物理インフラID</th><th>タグ</th></tr></thead>
+    <tbody>
+    {% for virtual in latest_virtual_list %}
+        <tr>
+            <td><a href="{% url 'infrastructures:virtual_detail' virtual.id %}">{{ virtual.id }}</a></td>
+            <td>{{ virtual.name }}</td>
+            <!--<td>{{ virtual.infrastructure_id }}</td>-->
+            <td><a href="{% url 'infrastructures:physical_detail' virtual.physical_id %}">{{ virtual.physical_id }}</a></td>
+            <td>{{ virtual.tags }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% include "common/pagination.html" %}
+{% else %}
+<p>仮想マシンが存在しません。</p>
+{% endif %}
+<br/>
+<hr>
+<b>latest_virtual_list: </b>{{ latest_virtual_list }}
+<br/><br/>
+{% endblock %}

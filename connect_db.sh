@@ -1,3 +1,5 @@
 #!/bin/sh
 
-sqlite3 anitya/db.sqlite3
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+
+sqlite3 ${SCRIPT_DIR}/anitya/db.sqlite3

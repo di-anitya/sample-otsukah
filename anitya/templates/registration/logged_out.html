@@ -1,0 +1,10 @@
+{% extends "simple.html" %}
+{% block title %}{{ block.super }} | ログアウト{% endblock title %}
+
+{% load staticfiles %}
+
+{% block body %}
+<h2>ログアウト</h2>
+<p>ログアウトしました。</p>
+<a href="/">[トップページへ]</a>
+{% endblock %}

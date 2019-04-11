@@ -1,0 +1,12 @@
+[
+{
+  "model": "infrastructures.driver",
+  "pk": "00c30fe4-f466-4a9c-9c73-7f5de2aea5b2",
+  "fields": {
+    "name": "boto3 for AWS",
+    "plugin": "boto3",
+    "created_at": "2019-03-24T13:01+00:00",
+    "updated_at": "2019-03-24T13:01+00:00"
+  }
+}
+]

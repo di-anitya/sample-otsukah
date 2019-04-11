@@ -1,0 +1,31 @@
+{% extends "simple.html" %}
+{% block title %}{{ block.super }} | サインアップ{% endblock title %}
+
+{% load staticfiles %}
+
+{% block body %}
+<h2 class="page-header">サインアップ</h2>
+<div>
+  <form role="form" action="{% url 'accounts:signup' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>
+      <label for="id_email">メールアドレス:</label>
+      {{ form.email }}
+    </div>
+    <div>
+      <label for="id_password1">パスワード:</label>
+      {{ form.password1 }}
+    </div>
+    <div>
+      <label for="id_password2">パスワードの確認:</label>
+      {{ form.password2 }}
+    </div>
+    <div>
+      <label for="id_username">ユーザーID:</label>
+      {{ form.username }}
+    <div>
+      <button class="btn btn-primary" type="submit">登録</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

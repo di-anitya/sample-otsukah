@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{{ block.super }} | 物理インフラ{% endblock title %}
+{% load staticfiles %}
+
+{% block extra_head %}
+    <link href="{% static 'infrastructures/css/style-infrastructures.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div class="breadlist">› インフラ › 物理インフラ</div>
+<h2 class="page-header">物理インフラ</h2>
+<div class="table-header">
+    <button type="button" class="btn btn-outline-dark"><i class="fa fa-plus"></i>&nbsp;&nbsp;<span>インフラ登録</span></button>
+</div>
+{% if latest_physical_list %}
+<table class="table table-striped table-hover">
+    <thead><tr><th>物理インフラID</th><th>物理インフラ名</th><th>種別</th><th>ドライバID</th></tr></thead>
+    <tbody>
+    {% for physical in latest_physical_list %}
+        <tr>
+            <td><a href="{% url 'infrastructures:physical_detail' physical.id %}">{{ physical.id }}</a></td>
+            <td>{{ physical.name }}</td>
+            <td>{{ physical.category }}</td>
+            <td><a href="{% url 'infrastructures:driver_detail' physical.driver_id %}">{{ physical.driver_id }}</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% include "common/pagination.html" %}
+{% else %}
+<p>物理インフラが存在しません。</p>
+{% endif %}
+<br/>
+<hr>
+<b>latest_physical_list: </b>{{ latest_physical_list }}
+<br/><br/>
+{% endblock %}
