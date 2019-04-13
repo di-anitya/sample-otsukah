@@ -10,13 +10,27 @@
 <div class="breadlist">› インフラ › 物理インフラ</div>
 <h2 class="page-header">物理インフラ</h2>
 <div class="table-header">
-    <button type="button" class="btn btn-outline-dark"><i class="fa fa-plus"></i>&nbsp;&nbsp;<span>インフラ登録</span></button>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+    <button class="physical-register-btn btn btn-primary" type="button" name="button"><i class="fas fa-plus">&nbsp;</i>物理インフラ登録</button>
+    <script type="text/javascript">
+      $(function () {
+        $(".physical-register-btn").modalForm({
+            formURL: "{% url 'infrastructures:physical_register' %}"
+        });
+
+      });
+    </script>
 </div>
-{% if latest_physical_list %}
+{% if all_physical_list %}
 <table class="table table-striped table-hover">
     <thead><tr><th>物理インフラID</th><th>物理インフラ名</th><th>種別</th><th>ドライバID</th></tr></thead>
     <tbody>
-    {% for physical in latest_physical_list %}
+    {% for physical in all_physical_list %}
         <tr>
             <td><a href="{% url 'infrastructures:physical_detail' physical.id %}">{{ physical.id }}</a></td>
             <td>{{ physical.name }}</td>
@@ -32,6 +46,6 @@
 {% endif %}
 <br/>
 <hr>
-<b>latest_physical_list: </b>{{ latest_physical_list }}
+<b>all_physical_list: </b>{{ all_physical_list }}
 <br/><br/>
 {% endblock %}

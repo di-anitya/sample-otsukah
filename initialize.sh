@@ -15,7 +15,7 @@ done
 
 python ${SCRIPT_DIR}/anitya/manage.py migrate
 
-python ${SCRIPT_DIR}/anitya/manage.py loaddata accounts/fixtures/user.json
-python ${SCRIPT_DIR}/anitya/manage.py loaddata infrastructures/fixtures/driver.json
-python ${SCRIPT_DIR}/anitya/manage.py loaddata infrastructures/fixtures/physical.json
-python ${SCRIPT_DIR}/anitya/manage.py loaddata infrastructures/fixtures/virtual.json
+python ${SCRIPT_DIR}/anitya/manage.py loaddata ${SCRIPT_DIR}/anitya/accounts/fixtures/user.json
+python ${SCRIPT_DIR}/anitya/manage.py loaddata ${SCRIPT_DIR}/anitya/infrastructures/fixtures/driver.json
+python ${SCRIPT_DIR}/anitya/manage.py loaddata ${SCRIPT_DIR}/anitya/infrastructures/fixtures/physical.json
+python ${SCRIPT_DIR}/anitya/manage.py loaddata ${SCRIPT_DIR}/anitya/infrastructures/fixtures/virtual.json
